@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UISwifty'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'UIKit Extension Library Like SwiftUI.'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = "UIKit Extension。 擴充各種 UI 繼承模組化"
+  s.description      = "UIKit Extension Library Like SwiftUI Thanks You."
 
   s.homepage         = 'https://github.com/alan5899f/UISwifty'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,9 +28,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = 'UISwifty/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   s.swift_version = '5.0'
+  
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   # s.resource_bundles = {
   #   'UISwifty' => ['UISwifty/Assets/*.png']

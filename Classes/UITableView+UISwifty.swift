@@ -22,7 +22,7 @@ extension UITableView {
     }
 
     func tableHeaderView(_ subview: UIView, headerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
-        let tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: headerViewHeight))
+        let tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: headerViewHeight))
         tableHeaderView.addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.topAnchor.constraint(equalTo: tableHeaderView.topAnchor).isActive = true
@@ -34,7 +34,7 @@ extension UITableView {
     }
 
     func tableFooterView(_ subview: UIView, footerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
-        let tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: footerViewHeight))
+        let tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: footerViewHeight))
         tableFooterView.addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.topAnchor.constraint(equalTo: tableFooterView.topAnchor).isActive = true
