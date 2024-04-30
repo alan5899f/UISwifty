@@ -7,24 +7,24 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
 
-    func placeholder(_ placeholder: String) -> Self {
+    public func placeholder(_ placeholder: String) -> Self {
         self.placeholder = placeholder
         return self
     }
 
-    func font(_ font: UIFont) -> Self {
+    public func font(_ font: UIFont) -> Self {
         self.font = font
         return self
     }
 
-    func textColor(_ textColor: UIColor) -> Self {
+    public func textColor(_ textColor: UIColor) -> Self {
         self.textColor = textColor
         return self
     }
 
-    func leftPadding() -> Self {
+    public func leftPadding() -> Self {
         self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         self.leftViewMode = .always
         return self

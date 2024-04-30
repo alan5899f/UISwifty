@@ -7,14 +7,14 @@
 
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
 
-    func image(_ image: UIImage?) -> Self {
+    public func image(_ image: UIImage?) -> Self {
         self.image = image
         return self
     }
 
-    func contentMode(_ contentMode: UIView.ContentMode) -> Self {
+    public func contentMode(_ contentMode: UIView.ContentMode) -> Self {
         self.contentMode = contentMode
         return self
     }

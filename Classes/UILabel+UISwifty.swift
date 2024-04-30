@@ -7,44 +7,44 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 
-    func font(_ font: UIFont) -> Self {
+    public func font(_ font: UIFont) -> Self {
         self.font = font
         return self
     }
 
-    func text(_ text: String) -> Self {
+    public func text(_ text: String) -> Self {
         self.text = text
         return self
     }
 
-    func textColor(_ textColor: UIColor) -> Self {
+    public func textColor(_ textColor: UIColor) -> Self {
         self.textColor = textColor
         return self
     }
 
-    func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
+    public func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
         self.textAlignment = textAlignment
         return self
     }
 
-    func numberOfLines(_ numberOfLines: Int) -> Self {
+    public func numberOfLines(_ numberOfLines: Int) -> Self {
         self.numberOfLines = numberOfLines
         return self
     }
 
-    func isEnabled(_ isEnabled: Bool) -> Self {
+    public func isEnabled(_ isEnabled: Bool) -> Self {
         self.isEnabled = isEnabled
         return self
     }
 
-    func attributedText(_ attributedText: NSAttributedString) -> Self {
+    public func attributedText(_ attributedText: NSAttributedString) -> Self {
         self.attributedText = attributedText
         return self
     }
 
-    func isSizeToFit() -> Self {
+    public func isSizeToFit() -> Self {
         self.sizeToFit()
         return self
     }

@@ -7,43 +7,43 @@
 
 import UIKit
 
-extension UIScrollView {
-    func delegate(_ delegate: UIScrollViewDelegate) -> Self  {
+public extension UIScrollView {
+    public func delegate(_ delegate: UIScrollViewDelegate) -> Self  {
         self.delegate = delegate
         return self
     }
 
-    func contentInset(_ contentInset: UIEdgeInsets) -> Self {
+    public func contentInset(_ contentInset: UIEdgeInsets) -> Self {
         self.contentInset = contentInset
         return self
     }
 
-    func isScrollEnabled(_ isScrollEnabled: Bool = true) -> Self {
+    public func isScrollEnabled(_ isScrollEnabled: Bool = true) -> Self {
         self.isScrollEnabled = isScrollEnabled
         return self
     }
 
-    func showsHorizontalScrollIndicator(_ showsHorizontalScrollIndicator: Bool = true) -> Self {
+    public func showsHorizontalScrollIndicator(_ showsHorizontalScrollIndicator: Bool = true) -> Self {
         self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         return self
     }
 
-    func showsVerticalScrollIndicator(_ showsVerticalScrollIndicator: Bool = true) -> Self {
+    public func showsVerticalScrollIndicator(_ showsVerticalScrollIndicator: Bool = true) -> Self {
         self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
         return self
     }
 
-    func contentInsetAdjustmentBehavior(_ contentInsetAdjustmentBehavior: UIScrollView.ContentInsetAdjustmentBehavior) -> Self  {
+    public func contentInsetAdjustmentBehavior(_ contentInsetAdjustmentBehavior: UIScrollView.ContentInsetAdjustmentBehavior) -> Self  {
         self.contentInsetAdjustmentBehavior = contentInsetAdjustmentBehavior
         return self
     }
 
-    func alwaysBounceHorizontal(_ alwaysBounceHorizontal: Bool = true) -> Self  {
+    public func alwaysBounceHorizontal(_ alwaysBounceHorizontal: Bool = true) -> Self  {
         self.alwaysBounceHorizontal = alwaysBounceHorizontal
         return self
     }
 
-    func alwaysBounceVertical(_ alwaysBounceVertical: Bool = true) -> Self  {
+    public func alwaysBounceVertical(_ alwaysBounceVertical: Bool = true) -> Self  {
         self.alwaysBounceVertical = alwaysBounceVertical
         return self
     }

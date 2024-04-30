@@ -7,29 +7,29 @@
 
 import UIKit
 
-extension CAGradientLayer {
+public extension CAGradientLayer {
 
-    func colors(_ colors: [UIColor]) -> Self {
+    public func colors(_ colors: [UIColor]) -> Self {
         self.colors = colors.compactMap({ $0.cgColor })
         return self
     }
 
-    func startPoint(_ startPoint: CGPoint) -> Self {
+    public func startPoint(_ startPoint: CGPoint) -> Self {
         self.startPoint = startPoint
         return self
     }
 
-    func endPoint(_ endPoint: CGPoint) -> Self {
+    public func endPoint(_ endPoint: CGPoint) -> Self {
         self.endPoint = endPoint
         return self
     }
 
-    func locations(_ locations: [NSNumber]) -> Self {
+    public func locations(_ locations: [NSNumber]) -> Self {
         self.locations = locations
         return self
     }
 
-    func opacity(_ opacity: Float) -> Self {
+    public func opacity(_ opacity: Float) -> Self {
         self.opacity = opacity
         return self
     }

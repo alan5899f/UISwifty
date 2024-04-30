@@ -7,14 +7,14 @@
 
 import UIKit
 
-extension UIActivityIndicatorView {
+public extension UIActivityIndicatorView {
 
-    func start() -> Self {
+    public func start() -> Self {
         self.startAnimating()
         return self
     }
 
-    func stop() -> Self {
+    public func stop() -> Self {
         self.stopAnimating()
         return self
     }
