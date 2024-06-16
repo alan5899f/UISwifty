@@ -10,7 +10,7 @@ import WebKit
 
 public extension WKWebView {
     // MARK: 關閉 WKWebView 縮放
-    public func zoomDisableScript() -> Self {
+     func zoomDisableScript() -> Self {
         let source = "var meta = document.createElement('meta');" +
             "meta.name = 'viewport';" +
             "meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';" +
@@ -21,7 +21,7 @@ public extension WKWebView {
     }
 
     // MARK: 關閉 WKWebView 編輯
-    public func editDisableScript() -> Self {
+     func editDisableScript() -> Self {
         let source = "var css = '*{-webkit-user-select:none}';" +
         "var head = document.head || document.getElementsByTagName('head')[0];" +
         "var style = document.createElement('style');" +
@@ -33,12 +33,12 @@ public extension WKWebView {
         return self
     }
 
-    public func showsVerticalScrollIndicator(_ showsVerticalScrollIndicator: Bool = true) -> Self {
+     func showsVerticalScrollIndicator(_ showsVerticalScrollIndicator: Bool = true) -> Self {
         self.scrollView.showsVerticalScrollIndicator = showsVerticalScrollIndicator
         return self
     }
 
-    public func showsHorizontalScrollIndicator(_ showsHorizontalScrollIndicator: Bool = true) -> Self {
+     func showsHorizontalScrollIndicator(_ showsHorizontalScrollIndicator: Bool = true) -> Self {
         self.scrollView.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         return self
     }

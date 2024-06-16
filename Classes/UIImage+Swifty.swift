@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIImage {
 
-    public func tintColor(_ color: UIColor) -> Self {
+    func tintColor(_ color: UIColor) -> Self {
         self.withTintColor(color, renderingMode: .alwaysOriginal)
         return self
     }

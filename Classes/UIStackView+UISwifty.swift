@@ -9,23 +9,28 @@ import UIKit
 
 public extension UIStackView {
 
-    public func axis(_ axis: NSLayoutConstraint.Axis) -> Self {
+    func axis(_ axis: NSLayoutConstraint.Axis) -> Self {
         self.axis = axis
         return self
     }
 
-    public func spacing(_ spacing: CGFloat) -> Self {
+    func spacing(_ spacing: CGFloat) -> Self {
         self.spacing = spacing
         return self
     }
 
-    public func distribution(_ distribution: UIStackView.Distribution) -> Self {
+    func distribution(_ distribution: UIStackView.Distribution) -> Self {
         self.distribution = distribution
         return self
     }
 
-    public func alignment(_ alignment: UIStackView.Alignment) -> Self {
+    func alignment(_ alignment: UIStackView.Alignment) -> Self {
         self.alignment = alignment
+        return self
+    }
+    
+    func set(after: UIView, spacing: CGFloat) -> Self {
+        self.setCustomSpacing(spacing, after: after)
         return self
     }
 }

@@ -9,48 +9,48 @@ import UIKit
 
 public extension UICollectionView {
 
-    public func register<T: UICollectionViewCell>(cellClass register: T.Type) -> Self {
+     func register<T: UICollectionViewCell>(cellClass register: T.Type) -> Self {
         self.register(register, forCellWithReuseIdentifier: String(describing: register))
         return self
     }
 
-    public func registerHeader<T: UICollectionReusableView>(cellClass register: T.Type) -> Self {
+     func registerHeader<T: UICollectionReusableView>(cellClass register: T.Type) -> Self {
         self.register(register, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: register))
         return self
     }
 
-    public func registerFooter<T: UICollectionReusableView>(cellClass register: T.Type) -> Self {
+     func registerFooter<T: UICollectionReusableView>(cellClass register: T.Type) -> Self {
         self.register(register, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: String(describing: register))
         return self
     }
 
-    public func dequeueReusableCell<T: UICollectionViewCell>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
+     func dequeueReusableCell<T: UICollectionViewCell>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: String(describing: register), for: indexPath) as? T else {
             fatalError("Couldn't find UICollectionViewCell for \(String(describing: register)), make sure the cell is registered with collection view.")
         }
         return cell
     }
 
-    public func dequeueHeaderReusableView<T: UICollectionReusableView>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
+     func dequeueHeaderReusableView<T: UICollectionReusableView>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: register.self), for: indexPath) as? T else {
             fatalError("Couldn't find UICollectionReusableView Footer for \(String(describing: register)), make sure the UICollectionReusableView is registered with collection view.")
         }
         return cell
     }
 
-    public func dequeueFooterReusableView<T: UICollectionReusableView>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
+     func dequeueFooterReusableView<T: UICollectionReusableView>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: String(describing: register.self), for: indexPath) as? T else {
             fatalError("Couldn't find UICollectionReusableView Header for \(String(describing: register)), make sure the UICollectionReusableView is registered with collection view.")
         }
         return cell
     }
 
-    public func delegate(_ delegate: UICollectionViewDelegate) -> Self  {
+     func delegate(_ delegate: UICollectionViewDelegate) -> Self  {
         self.delegate = delegate
         return self
     }
 
-    public func dataSource(_ dataSource: UICollectionViewDataSource) -> Self  {
+     func dataSource(_ dataSource: UICollectionViewDataSource) -> Self  {
         self.dataSource = dataSource
         return self
     }

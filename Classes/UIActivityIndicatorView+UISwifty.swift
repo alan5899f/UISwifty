@@ -9,12 +9,12 @@ import UIKit
 
 public extension UIActivityIndicatorView {
 
-    public func start() -> Self {
+    func start() -> Self {
         self.startAnimating()
         return self
     }
 
-    public func stop() -> Self {
+    func stop() -> Self {
         self.stopAnimating()
         return self
     }

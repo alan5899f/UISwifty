@@ -9,19 +9,19 @@ import UIKit
 
 public extension UITableView {
 
-    public func register<T: UITableViewCell>(cellClass register: T.Type) -> Self {
+     func register<T: UITableViewCell>(cellClass register: T.Type) -> Self {
         self.register(register.self, forCellReuseIdentifier: String(describing: register))
         return self
     }
 
-    public func dequeueReusableCell<T: UITableViewCell>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
+     func dequeueReusableCell<T: UITableViewCell>(cellClass register: T.Type, for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: String(describing: register), for: indexPath) as? T else {
             fatalError("Couldn't find UITableViewCell for \(String(describing: register)), make sure the cell is registered with table view.")
         }
         return cell
     }
 
-    public func tableHeaderView(_ subview: UIView, headerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
+     func tableHeaderView(_ subview: UIView, headerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
         let tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: headerViewHeight))
         tableHeaderView.addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ public extension UITableView {
         return self
     }
 
-    public func tableFooterView(_ subview: UIView, footerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
+     func tableFooterView(_ subview: UIView, footerViewHeight: CGFloat, inset: UIEdgeInsets = .zero) -> Self {
         let tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: footerViewHeight))
         tableFooterView.addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
@@ -45,12 +45,12 @@ public extension UITableView {
         return self
     }
 
-    public func delegate(_ delegate: UITableViewDelegate) -> Self  {
+     func delegate(_ delegate: UITableViewDelegate) -> Self  {
         self.delegate = delegate
         return self
     }
 
-    public func dataSource(_ dataSource: UITableViewDataSource) -> Self  {
+     func dataSource(_ dataSource: UITableViewDataSource) -> Self  {
         self.dataSource = dataSource
         return self
     }
@@ -60,24 +60,24 @@ public extension UITableView {
         return self
     }
 
-    public func sectionHeaderHeight(_ sectionHeaderHeight: CGFloat) -> Self  {
+     func sectionHeaderHeight(_ sectionHeaderHeight: CGFloat) -> Self  {
         self.sectionHeaderHeight = sectionHeaderHeight
         return self
     }
 
-    public func sectionHeaderTopPadding(_ sectionHeaderTopPadding: CGFloat) -> Self  {
+     func sectionHeaderTopPadding(_ sectionHeaderTopPadding: CGFloat) -> Self  {
         if #available(iOS 15.0, *) {
             self.sectionHeaderTopPadding = sectionHeaderTopPadding
         } 
         return self
     }
 
-    public func rowHeight(_ rowHeight: CGFloat) -> Self {
+     func rowHeight(_ rowHeight: CGFloat) -> Self {
         self.rowHeight = rowHeight
         return self
     }
 
-    public func allowsSelection(_ allowsSelection: Bool = true) -> Self {
+     func allowsSelection(_ allowsSelection: Bool = true) -> Self {
         self.allowsSelection = allowsSelection
         return self
     }
