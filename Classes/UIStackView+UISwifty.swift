@@ -29,7 +29,7 @@ public extension UIStackView {
         return self
     }
     
-    func set(after: UIView, spacing: CGFloat) -> Self {
+    func setCustomSpacing(after: UIView, spacing: CGFloat) -> Self {
         self.setCustomSpacing(spacing, after: after)
         return self
     }
