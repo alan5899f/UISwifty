@@ -18,7 +18,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby 
 target '<Your Target Name>' do
-    pod 'UISwifty', :git => "https://github.com/alan5899f/UISwifty.git", :tag => '1.0.7'
+    pod 'UISwifty', :git => "https://github.com/alan5899f/UISwifty.git", :tag => '1.0.8'
 end
 ```
 
