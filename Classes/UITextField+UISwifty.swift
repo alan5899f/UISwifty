@@ -29,4 +29,14 @@ public extension UITextField {
         self.leftViewMode = .always
         return self
     }
+    
+    func keyboardType(_ keyboardType: UIKeyboardType) -> Self {
+        self.keyboardType = keyboardType
+        return self
+    }
+    
+    func returnKeyType(_ returnKeyType: UIReturnKeyType) -> Self {
+        self.returnKeyType = returnKeyType
+        return self
+    }
 }
