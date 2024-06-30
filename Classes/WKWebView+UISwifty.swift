@@ -9,6 +9,17 @@ import Foundation
 import WebKit
 
 public extension WKWebView {
+    
+    func navigationDelegate(_ delegate: WKNavigationDelegate) -> Self {
+        self.navigationDelegate = delegate
+        return self
+    }
+    
+    func uiDelegate(_ delegate: WKUIDelegate) -> Self {
+        self.uiDelegate = delegate
+        return self
+    }
+    
     // MARK: 關閉 WKWebView 縮放
      func zoomDisableScript() -> Self {
         let source = "var meta = document.createElement('meta');" +
