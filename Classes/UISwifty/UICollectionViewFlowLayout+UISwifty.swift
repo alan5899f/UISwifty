@@ -1,5 +1,5 @@
 //
-//  UICollectionViewLayout+UISwifty.swift
+//  UICollectionViewFlowLayout+UISwifty.swift
 //  Travel
 //
 //  Created by 陳韋綸 on 2023/12/18.

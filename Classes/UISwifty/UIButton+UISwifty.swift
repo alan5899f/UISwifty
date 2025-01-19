@@ -8,12 +8,6 @@
 import UIKit
 
 public extension UIButton {
-
-     func font(_ font: UIFont) -> Self {
-        self.titleLabel?.font = font
-        return self
-    }
-
      func setImage(_ image: UIImage, state: UIControl.State) -> Self {
         self.setImage(image, for: state)
         return self
@@ -51,6 +45,26 @@ public extension UIButton {
 
      func imageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) -> Self {
         self.imageEdgeInsets = imageEdgeInsets
+        return self
+    }
+    
+    func isEnabled(_ isEnabled: Bool) -> Self {
+        self.isEnabled = isEnabled
+        return self
+    }
+    
+    func isSelected(_ isSelected: Bool) -> Self {
+        self.isSelected = isSelected
+        return self
+    }
+    
+    func isHighlighted(_ isHighlighted: Bool) -> Self {
+        self.isHighlighted = isHighlighted
+        return self
+    }
+    
+    func setAttributedTitle(_ title: NSAttributedString?, state: UIControl.State) -> Self {
+        self.setAttributedTitle(title, for: state)
         return self
     }
 }

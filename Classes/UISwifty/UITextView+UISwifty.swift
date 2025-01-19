@@ -27,4 +27,9 @@ public extension UITextView {
         self.returnKeyType = returnKeyType
         return self
     }
+    
+    func delegate(_ delegate: UITextViewDelegate) -> Self {
+        self.delegate = delegate
+        return self
+    }
 }

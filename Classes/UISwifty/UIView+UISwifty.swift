@@ -87,4 +87,14 @@ public extension UIView {
         self.addGestureRecognizer(addGestureRecognizer)
         return self
     }
+    
+    func setSizeToFit() -> Self {
+        self.sizeToFit()
+        return self
+    }
+    
+    func setSizeThatFits(_ size: CGSize) -> Self {
+        self.sizeThatFits(size)
+        return self
+    }
 }

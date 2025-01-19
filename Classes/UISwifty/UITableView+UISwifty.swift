@@ -63,12 +63,11 @@ public extension UITableView {
      func sectionHeaderHeight(_ sectionHeaderHeight: CGFloat) -> Self  {
         self.sectionHeaderHeight = sectionHeaderHeight
         return self
-    }
-
+     }
+    
+    @available(iOS 15.0, *)
      func sectionHeaderTopPadding(_ sectionHeaderTopPadding: CGFloat) -> Self  {
-        if #available(iOS 15.0, *) {
-            self.sectionHeaderTopPadding = sectionHeaderTopPadding
-        } 
+        self.sectionHeaderTopPadding = sectionHeaderTopPadding
         return self
     }
 

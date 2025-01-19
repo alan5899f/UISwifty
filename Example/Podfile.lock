@@ -1,0 +1,16 @@
+PODS:
+  - UISwifty (0.1.0)
+
+DEPENDENCIES:
+  - UISwifty (from `../`)
+
+EXTERNAL SOURCES:
+  UISwifty:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UISwifty: 07773b6705d0b82736ec003e8e8f81fdb8474a36
+
+PODFILE CHECKSUM: 6f2785f9db0d990ca929198d2cadd17e4731878b
+
+COCOAPODS: 1.15.2

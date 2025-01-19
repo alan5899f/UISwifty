@@ -47,4 +47,56 @@ public extension UIScrollView {
         self.alwaysBounceVertical = alwaysBounceVertical
         return self
     }
+    
+    func isPagingEnabled(_ isPagingEnabled: Bool) -> Self {
+        self.isPagingEnabled = isPagingEnabled
+       return self
+   }
+    
+    func bounces(_ bounces: Bool) -> Self {
+        self.bounces = bounces
+       return self
+   }
+    
+    func bouncesZoom(_ bouncesZoom: Bool) -> Self {
+        self.bouncesZoom = bouncesZoom
+       return self
+   }
+    
+    @available(iOS 17.4, *)
+    func bouncesHorizontally(_ bouncesHorizontally: Bool) -> Self {
+        self.bouncesHorizontally = bouncesHorizontally
+       return self
+   }
+    
+    @available(iOS 17.4, *)
+    func bouncesVertically(_ bouncesVertically: Bool) -> Self {
+        self.bouncesVertically = bouncesVertically
+       return self
+   }
+    
+    func scrollIndicatorInsets(_ scrollIndicatorInsets: UIEdgeInsets) -> Self {
+        self.scrollIndicatorInsets = scrollIndicatorInsets
+       return self
+   }
+    
+    func contentSize(_ contentSize: CGSize) -> Self {
+        self.contentSize = contentSize
+       return self
+   }
+    
+    func contentOffset(_ contentOffset: CGPoint) -> Self {
+        self.contentOffset = contentOffset
+       return self
+   }
+    
+    func maximumZoomScale(_ maximumZoomScale: CGFloat) -> Self {
+        self.maximumZoomScale = maximumZoomScale
+       return self
+   }
+    
+    func minimumZoomScale(_ minimumZoomScale: CGFloat) -> Self {
+        self.minimumZoomScale = minimumZoomScale
+       return self
+   }
 }
